@@ -1,0 +1,444 @@
+/* ==========================================================================
+   Bloomery Landing Page Styles
+   Design System: Forest Edge (BotW-inspired)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties (Design Tokens)
+   -------------------------------------------------------------------------- */
+:root {
+    /* Colors - Light Mode */
+    --color-background: #F9F6F3;        /* Parchment Mist */
+    --color-surface: #F4F1DE;           /* Glade Beige */
+    --color-text-primary: #241717;      /* Deep Loam */
+    --color-text-secondary: #536F50;    /* Stone Bark */
+    --color-text-muted: #948E7E;        /* Lichen Grey */
+    --color-action-primary: #4B6B3C;    /* Mindleaf Fern */
+    --color-action-hover: #3A4928;      /* Deep Moss */
+    --color-accent: #20F0D8;            /* Stream Teal */
+    --color-attention: #E9760B;         /* Amber Resin */
+
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* Spacing (8-point grid) */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-2xl: 64px;
+
+    /* Border Radius */
+    --radius-button: 12px;
+    --radius-card: 24px;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-card: 0 4px 16px rgba(36, 23, 23, 0.06);
+    --shadow-button: 0 2px 8px rgba(75, 107, 60, 0.2);
+
+    /* Layout */
+    --max-width: 720px;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   -------------------------------------------------------------------------- */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section
+   -------------------------------------------------------------------------- */
+.hero {
+    padding: var(--space-2xl) 0;
+    text-align: center;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-weight: 600;
+    color: var(--color-action-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: var(--space-xs);
+}
+
+.tagline {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+    font-weight: 500;
+}
+
+.value-prop {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    max-width: 520px;
+    margin: 0 auto var(--space-lg);
+    line-height: 1.7;
+}
+
+/* --------------------------------------------------------------------------
+   Email Signup Form
+   -------------------------------------------------------------------------- */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    max-width: 400px;
+    margin: 0 auto var(--space-sm);
+}
+
+@media (min-width: 480px) {
+    .signup-form {
+        flex-direction: row;
+    }
+}
+
+.signup-form input[type="email"] {
+    flex: 1;
+    padding: var(--space-sm);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    border: 1.5px solid var(--color-text-muted);
+    border-radius: var(--radius-button);
+    background: white;
+    color: var(--color-text-primary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup-form input[type="email"]::placeholder {
+    color: var(--color-text-muted);
+}
+
+.signup-form input[type="email"]:focus {
+    outline: none;
+    border-color: var(--color-action-primary);
+    box-shadow: 0 0 0 3px rgba(75, 107, 60, 0.15);
+}
+
+.signup-form button {
+    padding: var(--space-sm) var(--space-md);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 600;
+    color: white;
+    background-color: var(--color-action-primary);
+    border: none;
+    border-radius: var(--radius-button);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+    box-shadow: var(--shadow-button);
+}
+
+.signup-form button:hover {
+    background-color: var(--color-action-hover);
+}
+
+.signup-form button:active {
+    transform: scale(0.98);
+}
+
+.signup-note {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Philosophy Section
+   -------------------------------------------------------------------------- */
+.philosophy {
+    padding: var(--space-2xl) 0;
+    background-color: var(--color-surface);
+}
+
+.philosophy h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    color: var(--color-text-primary);
+}
+
+.philosophy-grid {
+    display: grid;
+    gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+    .philosophy-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+    }
+}
+
+.philosophy-card {
+    background: var(--color-background);
+    padding: var(--space-md);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(148, 142, 126, 0.2);
+}
+
+.philosophy-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-action-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.philosophy-card p {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Team Section
+   -------------------------------------------------------------------------- */
+.team {
+    padding: var(--space-xl) 0;
+    text-align: center;
+}
+
+.team-text {
+    font-size: 1.125rem;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    font-style: italic;
+}
+
+.team-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-action-primary);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1.5px solid currentColor;
+    transition: color 0.2s ease;
+}
+
+.team-link:hover {
+    color: var(--color-action-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+    padding: var(--space-lg) 0;
+    border-top: 1px solid rgba(148, 142, 126, 0.2);
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.footer-links a {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-action-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Disclaimer
+   -------------------------------------------------------------------------- */
+.disclaimer {
+    padding: var(--space-md) 0;
+    background-color: var(--color-surface);
+}
+
+.disclaimer p {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Page Header (for subpages)
+   -------------------------------------------------------------------------- */
+.page-header {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid rgba(148, 142, 126, 0.2);
+}
+
+.brand-link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-action-primary);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+}
+
+.brand-link:hover {
+    color: var(--color-action-hover);
+}
+
+/* --------------------------------------------------------------------------
+   Content Pages (Privacy, etc.)
+   -------------------------------------------------------------------------- */
+.content-page {
+    padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.content-page h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.last-updated {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xl);
+}
+
+.content-section {
+    margin-bottom: var(--space-lg);
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.content-section h2:first-child {
+    margin-top: 0;
+}
+
+.content-section h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-action-primary);
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+}
+
+.content-section p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-sm);
+    line-height: 1.7;
+}
+
+.content-section ul {
+    margin: var(--space-sm) 0;
+    padding-left: var(--space-md);
+    color: var(--color-text-secondary);
+}
+
+.content-section li {
+    margin-bottom: var(--space-xs);
+    line-height: 1.6;
+}
+
+.content-section a {
+    color: var(--color-action-primary);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    transition: color 0.2s ease;
+}
+
+.content-section a:hover {
+    color: var(--color-action-hover);
+}
+
+.highlight-section {
+    background: var(--color-surface);
+    padding: var(--space-md);
+    border-radius: var(--radius-card);
+    border: 1px solid rgba(148, 142, 126, 0.2);
+}
+
+.highlight-section h2 {
+    margin-top: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Focus States (Accessibility)
+   -------------------------------------------------------------------------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--color-action-primary);
+    outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

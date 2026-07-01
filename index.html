@@ -3,128 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bloomery is a privacy-first mood journal that welcomes you back without judgment. No streaks, no guilt—just kind, private mood tracking.">
-    <meta name="theme-color" content="#F9F6F3">
-    <title>Bloomery — Track your mood kindly, privately.</title>
+    <meta name="description" content="Bloomery is a private iPhone and Apple Watch mood journal for quick check-ins, Month Map history, and modest insights with no streaks or guilt.">
+    <meta name="theme-color" content="#F7F0E4">
+    <title>Bloomery - Mood tracking without streaks.</title>
     <link rel="canonical" href="https://bloomery.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Bloomery">
-    <meta property="og:title" content="Bloomery — Track your mood kindly, privately.">
-    <meta property="og:description" content="A privacy-first mood journal that welcomes you back without judgment. No streaks, no guilt.">
+    <meta property="og:title" content="Bloomery - Mood tracking without streaks.">
+    <meta property="og:description" content="Quick mood check-ins, Month Map history, and modest insights for iPhone and Apple Watch.">
     <meta property="og:url" content="https://bloomery.app/">
     <meta property="og:image" content="https://bloomery.app/social-card.png">
+    <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Bloomery — Track your mood kindly, privately.">
+    <meta property="og:image:alt" content="Bloomery - mood tracking without streaks.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Bloomery — Track your mood kindly, privately.">
-    <meta name="twitter:description" content="A privacy-first mood journal that welcomes you back without judgment. No streaks, no guilt.">
+    <meta name="twitter:title" content="Bloomery - Mood tracking without streaks.">
+    <meta name="twitter:description" content="Quick mood check-ins, Month Map history, and modest insights for iPhone and Apple Watch.">
     <meta name="twitter:image" content="https://bloomery.app/social-card.png">
-    <meta name="twitter:image:alt" content="Bloomery — Track your mood kindly, privately.">
+    <meta name="twitter:image:alt" content="Bloomery - mood tracking without streaks.">
+    <link rel="preload" href="assets/fonts/Fraunces-opsz-wght-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to content</a>
 
+    <header class="site-header" aria-label="Bloomery website">
+        <a class="site-mark" href="index.html" aria-label="Bloomery home">
+            <img class="site-icon" src="assets/app-icon.png" alt="" width="34" height="34" decoding="async">
+            <span>Bloomery</span>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+            <a href="#inside">Inside the app</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="mailto:hello@twodesks.app">Support</a>
+            <a class="nav-cta" href="#join">Join the list</a>
+        </nav>
+    </header>
+
     <main id="main">
-    <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
-        <div class="container">
-            <h1 id="hero-title" class="brand">Bloomery</h1>
-            <p class="tagline">Track your mood kindly, privately.</p>
-            <p class="value-prop">
-                A mood journal that welcomes you back—even after weeks away.
-                Your data stays on your device. We literally cannot see it.
-            </p>
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="launch-pill">Launching summer 2026 · Free</p>
+                <p class="eyebrow">Private mood journaling for iPhone &amp; Apple Watch</p>
+                <h1 id="hero-title">Mood tracking without streaks.</h1>
+                <p class="hero-lede">
+                    Check in with one mood, look back through Month Map and Journal when you want context, and read observations about what your entries can actually show.
+                </p>
 
-            <!-- Buttondown Email Signup -->
-            <form
-                action="https://buttondown.com/api/emails/embed-subscribe/bloomery"
-                method="post"
-                target="popupwindow"
-                class="signup-form"
-            >
-                <label for="signup-email" class="sr-only">Email address</label>
-                <input
-                    id="signup-email"
-                    type="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    required
-                    autocomplete="email"
-                    inputmode="email"
-                    aria-describedby="signup-note"
-                />
-                <button type="submit">Notify me at launch</button>
-            </form>
-            <p class="signup-note" id="signup-note">We'll only email you when Bloomery is ready.</p>
-        </div>
-    </section>
+                <form class="waitlist-form" action="https://buttondown.com/api/emails/embed-subscribe/bloomery" method="post" target="popupwindow">
+                    <label class="visually-hidden" for="hero-email">Email address for Bloomery launch updates</label>
+                    <input id="hero-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="hero-email-note">
+                    <button type="submit">Notify me at launch</button>
+                </form>
+                <p class="form-note" id="hero-email-note">We'll only email launch updates. Email handled by Buttondown; unsubscribe anytime.</p>
 
-    <!-- Philosophy Section -->
-    <section class="philosophy" aria-labelledby="philosophy-title">
-        <div class="container">
-            <h2 id="philosophy-title">A kinder way to track your mood</h2>
+                <ul class="trust-strip">
+                    <li>No account required</li>
+                    <li>Journal content stays off Bloomery servers</li>
+                    <li>No ads or journal-content AI training</li>
+                </ul>
+            </div>
 
-            <div class="philosophy-grid">
-                <div class="philosophy-card">
-                    <h3>No streaks. No guilt.</h3>
-                    <p>
-                        Unlike apps that punish missed days, Bloomery welcomes you back without judgment.
-                        Skip a week, skip a month—your journal waits patiently.
-                    </p>
+            <div class="product-stage">
+                <figure class="device hero-device hero-device-home">
+                    <picture>
+                        <source srcset="assets/screenshot-home.webp" type="image/webp">
+                        <img src="assets/screenshot-home.png" alt="Bloomery Home screen showing this week's mood takeaway and a Month Map calendar." width="424" height="920" decoding="async" fetchpriority="high">
+                    </picture>
+                </figure>
+                <figure class="device hero-device hero-device-insights">
+                    <picture>
+                        <source srcset="assets/screenshot-insights.webp" type="image/webp">
+                        <img src="assets/screenshot-insights.png" alt="Bloomery Insights screen showing a mood-over-time chart and recent patterns." width="424" height="920" decoding="async">
+                    </picture>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section intro-band" aria-labelledby="promise-title">
+            <div class="section-inner narrow reveal">
+                <p class="eyebrow">No streaks, no guilt</p>
+                <h2 id="promise-title">Track your emotional life without turning it into a scoreboard.</h2>
+                <p>
+                    A single mood is enough. Days without entries are just days without entries. Insights stay tied to what you logged; they do not diagnose, advise, or claim certainty.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="inside" aria-labelledby="inside-title">
+            <div class="section-inner">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">Inside Bloomery</p>
+                    <h2 id="inside-title">Mood notes that stay useful, even when life gets uneven.</h2>
                 </div>
 
-                <div class="philosophy-card">
-                    <h3>Private by design</h3>
-                    <p>
-                        Your mood data stays on your device. No cloud sync required, no account needed.
-                        We built it this way because your emotional life is nobody's business but yours.
-                    </p>
-                </div>
+                <div class="feature-flow">
+                    <article class="feature-row reveal">
+                        <figure class="device device--sm feature-device">
+                            <picture>
+                                <source srcset="assets/screenshot-checkin.webp" type="image/webp">
+                                <img src="assets/screenshot-checkin.png" alt="Bloomery check-in screen showing the simple mood picker." width="424" height="920" loading="lazy" decoding="async">
+                            </picture>
+                        </figure>
+                        <div class="feature-copy">
+                            <p class="flow-step">Check-in</p>
+                            <h3>Start with one mood.</h3>
+                            <p>A mood can stand on its own. Add activities, a note, voice, a photo, or a different time only when it helps.</p>
+                        </div>
+                    </article>
 
-                <div class="philosophy-card">
-                    <h3>Your Mind Garden</h3>
-                    <p>
-                        Every entry plants something in your garden—and nothing ever wilts.
-                        Growth is permanent. Absence is rest, not failure.
-                    </p>
+                    <article class="feature-row feature-row--reverse reveal">
+                        <figure class="device device--sm feature-device">
+                            <picture>
+                                <source srcset="assets/screenshot-entry-detail.webp" type="image/webp">
+                                <img src="assets/screenshot-entry-detail.png" alt="Bloomery entry detail screen with mood context, note, activities, and a pressed flower specimen." width="424" height="920" loading="lazy" decoding="async">
+                            </picture>
+                        </figure>
+                        <div class="feature-copy">
+                            <p class="flow-step">Journal</p>
+                            <h3>Keep the details you care about.</h3>
+                            <p>Search Journal when you need details; browse Herbarium when you want entries as pressed specimens.</p>
+                        </div>
+                    </article>
+
+                    <article class="feature-row reveal">
+                        <figure class="device device--sm feature-device">
+                            <picture>
+                                <source srcset="assets/screenshot-insights.webp" type="image/webp">
+                                <img src="assets/screenshot-insights.png" alt="Bloomery Insights screen showing a mood-over-time chart and recent patterns." width="424" height="920" loading="lazy" decoding="async">
+                            </picture>
+                        </figure>
+                        <div class="feature-copy">
+                            <p class="flow-step">Insights</p>
+                            <h3>Let insights stay modest.</h3>
+                            <p>Bloomery can point out patterns in what you logged. It does not diagnose you or tell you what to do next.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Team Section -->
-    <section class="team">
-        <div class="container">
-            <p class="team-text">
-                Built by a two-person indie team who were tired of feeling bad about mental health apps.
-            </p>
-            <a href="https://twodesks.app" class="team-link">Learn more about Two Desks</a>
-        </div>
-    </section>
+        <section class="section evidence-section" aria-labelledby="evidence-title">
+            <div class="section-inner archive-layout">
+                <div class="archive-copy reveal">
+                    <p class="eyebrow">Visual memory</p>
+                    <h2 id="evidence-title">A record of what happened, not a streak to protect.</h2>
+                    <p>
+                        Month Map shows entries in calendar context. Journal keeps them searchable. Herbarium saves selected entries as pressed-specimen memories.
+                    </p>
+                </div>
+                <dl class="archive-list reveal">
+                    <div>
+                        <dt>
+                            <span class="archive-mark archive-mark--month" aria-hidden="true"></span>
+                            Month Map
+                        </dt>
+                        <dd>A calendar view for days you logged and days you did not.</dd>
+                    </div>
+                    <div>
+                        <dt>
+                            <span class="archive-mark archive-mark--journal" aria-hidden="true"></span>
+                            Journal
+                        </dt>
+                        <dd>Search, filters, entry detail, notes, voice, photos, and time.</dd>
+                    </div>
+                    <div>
+                        <dt>
+                            <span class="archive-mark archive-mark--herbarium" aria-hidden="true"></span>
+                            Herbarium
+                        </dt>
+                        <dd>Selected entries, saved as pressed-specimen memories.</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <section class="section privacy-section" id="privacy" aria-labelledby="privacy-title">
+            <div class="section-inner split reverse">
+                <div class="privacy-stack reveal">
+                    <div>
+                        <span>Account</span>
+                        <strong>No Bloomery account required</strong>
+                    </div>
+                    <div>
+                        <span>Journal</span>
+                        <strong>Journal content stays off Bloomery servers</strong>
+                    </div>
+                    <div>
+                        <span>Analytics</span>
+                        <strong>Optional analytics are off by default and never include journal content</strong>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <p class="eyebrow">Privacy</p>
+                    <h2 id="privacy-title">Your journal stays off our servers.</h2>
+                    <p>
+                        Bloomery stores your mood entries, notes, photos, voice notes, and insights on your device by default. If you enable iCloud sync, your data syncs through your personal Apple iCloud account, not a Bloomery journal server.
+                    </p>
+                    <a class="inline-cta" href="privacy.html">Read the full policy</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section founder-section" aria-labelledby="founder-title">
+            <div class="section-inner founder-layout reveal">
+                <div>
+                    <p class="eyebrow">From Two Desks</p>
+                    <h2 id="founder-title">Built for people who keep coming back to themselves.</h2>
+                </div>
+                <div class="founder-note">
+                    <p>
+                        We started Bloomery after getting tired of mood-tracking apps that made absences feel like failures. We wanted a private place to notice what changed, keep the context that mattered, and return without being scolded.
+                    </p>
+                    <p>
+                        Use Bloomery when it helps. Leave it alone when it doesn't. Your journal will still be there.
+                    </p>
+                    <p class="signature">— Harry &amp; Vasso, Two Desks</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section" aria-labelledby="faq-title">
+            <div class="section-inner faq-layout">
+                <div class="section-heading reveal">
+                    <p class="eyebrow">FAQ</p>
+                    <h2 id="faq-title">A few practical answers.</h2>
+                </div>
+                <div class="faq-list reveal">
+                    <details>
+                        <summary>Is my data private?</summary>
+                        <p>Yes. Journal content is stored on your device by default. If you enable iCloud sync, it syncs through your personal Apple iCloud account, not a Bloomery journal server.</p>
+                    </details>
+                    <details>
+                        <summary>How much does Bloomery cost?</summary>
+                        <p>Bloomery will be free at launch.</p>
+                    </details>
+                    <details>
+                        <summary>When does it launch?</summary>
+                        <p>Bloomery is planned for summer 2026. Join the list and we will email when it is ready.</p>
+                    </details>
+                    <details>
+                        <summary>Which devices are supported?</summary>
+                        <p>Bloomery is launching for iPhone with an Apple Watch companion for quick check-ins from your wrist.</p>
+                    </details>
+                    <details>
+                        <summary>Do I need an account?</summary>
+                        <p>No. Bloomery is built to work without a Bloomery account.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section closing-section" id="join" aria-labelledby="join-title">
+            <div class="section-inner closing-card reveal">
+                <div>
+                    <p class="eyebrow">Launch list</p>
+                    <h2 id="join-title">Launching summer 2026. Be the first to start your journal.</h2>
+                </div>
+                <div class="closing-form-wrap">
+                    <form class="waitlist-form" action="https://buttondown.com/api/emails/embed-subscribe/bloomery" method="post" target="popupwindow">
+                        <label class="visually-hidden" for="closing-email">Email address for Bloomery launch updates</label>
+                        <input id="closing-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required aria-describedby="closing-email-note">
+                        <button type="submit">Join the list</button>
+                    </form>
+                    <p class="form-note" id="closing-email-note">We'll only email launch updates. Email handled by Buttondown; unsubscribe anytime.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p class="copyright">&copy; 2026 Two Desks</p>
-            <nav class="footer-links">
+        <div class="footer-inner">
+            <p>&copy; 2026 Two Desks</p>
+            <nav class="footer-links" aria-label="Footer">
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="mailto:hello@twodesks.app">Contact</a>
+                <a href="https://twodesks.app">Two Desks</a>
             </nav>
         </div>
+        <p class="disclaimer">
+            Bloomery is a self-reflection and journaling tool. It is not intended to diagnose, treat, cure, or prevent any disease or mental health condition.
+        </p>
     </footer>
 
-    <!-- Disclaimer -->
-    <div class="disclaimer">
-        <div class="container">
-            <p>
-                Bloomery is a self-reflection and journaling tool. It is not intended to diagnose, treat, cure, or prevent any disease or mental health condition.
-                If you have mental health concerns, please consult a qualified healthcare professional.
-            </p>
-        </div>
-    </div>
+    <script>
+        (() => {
+            const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            if (reduceMotion || !("IntersectionObserver" in window)) {
+                return;
+            }
+
+            document.documentElement.classList.add("reveal-enabled");
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: "0px 0px -10% 0px", threshold: 0.1 });
+
+            document.querySelectorAll(".reveal").forEach((element) => {
+                observer.observe(element);
+            });
+        })();
+    </script>
 </body>
 </html>

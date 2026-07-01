@@ -1,14 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Bloomery</title>
-  <desc id="desc">Track your mood kindly, privately.</desc>
-  <rect width="1200" height="630" fill="#F9F6F3"/>
-  <rect x="80" y="74" width="1040" height="482" rx="48" fill="#F4F1DE" stroke="#D9D1B8" stroke-width="2"/>
-  <path d="M990 392c34-42 78-58 128-43-9 53-50 90-111 96-4-21-10-39-17-53z" fill="#88A47C"/>
-  <path d="M944 388c31-59 80-87 138-77-10 63-60 108-130 110-2-12-5-23-8-33z" fill="#4B6B3C"/>
-  <path d="M962 472c-58-8-98-45-109-99 56-4 103 24 129 80-7 5-14 11-20 19z" fill="#D4849A"/>
-  <path d="M888 505c50-50 111-60 162-35-25 56-84 85-154 70-1-13-4-24-8-35z" fill="#E9A820"/>
-  <text x="150" y="224" fill="#4B6B3C" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="88" font-weight="700">Bloomery</text>
-  <text x="150" y="302" fill="#241717" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="48" font-weight="600">Track your mood kindly, privately.</text>
-  <text x="150" y="382" fill="#536F50" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="32">No streaks. No guilt. Your data stays on your device.</text>
-  <text x="150" y="438" fill="#6F675C" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="28">A mood journal that welcomes you back without judgment.</text>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="homeScreen">
+      <rect x="794" y="72" width="214" height="464" rx="36"/>
+    </clipPath>
+    <clipPath id="insightsScreen">
+      <rect x="956" y="112" width="184" height="399" rx="31"/>
+    </clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="#F7F0E4"/>
+  <path d="M78 110C78 87.9086 95.9086 70 118 70H720C742.091 70 760 87.9086 760 110V520C760 542.091 742.091 560 720 560H118C95.9086 560 78 542.091 78 520V110Z" fill="#FFFAF2" stroke="#D8C9B6" stroke-width="2"/>
+  <path d="M780 74C805 36 870 36 926 52C999 73 1074 97 1104 166C1142 253 1126 376 1055 448C986 517 867 534 785 484C710 438 704 324 720 235C732 166 743 130 780 74Z" fill="#EADCC8" fill-opacity="0.62"/>
+
+  <rect x="784" y="62" width="234" height="484" rx="48" fill="#0C0D10"/>
+  <image href="assets/screenshot-home.png" x="794" y="72" width="214" height="464" preserveAspectRatio="xMidYMid slice" clip-path="url(#homeScreen)"/>
+  <rect x="794" y="72" width="214" height="464" rx="36" stroke="#FFFAF2" stroke-opacity="0.2" stroke-width="1"/>
+
+  <rect x="946" y="102" width="204" height="419" rx="43" fill="#0C0D10"/>
+  <image href="assets/screenshot-insights.png" x="956" y="112" width="184" height="399" preserveAspectRatio="xMidYMid slice" clip-path="url(#insightsScreen)"/>
+  <rect x="956" y="112" width="184" height="399" rx="31" stroke="#FFFAF2" stroke-opacity="0.2" stroke-width="1"/>
+
+  <image href="assets/app-icon.png" x="142" y="132" width="72" height="72" preserveAspectRatio="xMidYMid slice"/>
+  <text x="232" y="180" fill="#211716" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="42" font-weight="800">Bloomery</text>
+  <text x="142" y="278" fill="#41664A" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="800">Launching summer 2026 · Free</text>
+  <text x="142" y="354" fill="#211716" font-family="Georgia, serif" font-size="74" font-weight="700">Mood tracking</text>
+  <text x="142" y="432" fill="#211716" font-family="Georgia, serif" font-size="74" font-weight="700">without streaks.</text>
+  <text x="142" y="495" fill="#594C47" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="26">Private mood journal for iPhone + Apple Watch.</text>
+  <circle cx="150" cy="538" r="5" fill="#41664A"/>
+  <text x="170" y="548" fill="#41664A" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="26" font-weight="800">No account required</text>
 </svg>

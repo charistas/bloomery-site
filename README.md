@@ -1,10 +1,10 @@
-# Bloomery Launch Site
+# Tendi Launch Site
 
-Static GitHub Pages site for [bloomery.app](https://bloomery.app), the public support, privacy, and launch page for Bloomery.
+Static GitHub Pages site for [tendijournal.app](https://tendijournal.app), the public support, privacy, and launch page for Tendi.
 
 ## Site Role
 
-The site should communicate the current Bloomery product:
+The site should communicate the current Tendi product:
 
 - Mood journaling without streaks, guilt, or missed-day pressure.
 - Quick check-ins, practical journal history, Month Map, Year Map, Herbarium, and careful insights.

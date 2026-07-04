@@ -20,7 +20,7 @@
   <rect x="956" y="112" width="184" height="399" rx="31" stroke="#FFFAF2" stroke-opacity="0.2" stroke-width="1"/>
 
   <image href="assets/app-icon.png" x="142" y="132" width="72" height="72" preserveAspectRatio="xMidYMid slice"/>
-  <text x="232" y="180" fill="#211716" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="42" font-weight="800">Bloomery</text>
+  <text x="232" y="180" fill="#211716" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="42" font-weight="800">Tendi</text>
   <text x="142" y="278" fill="#41664A" font-family="-apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif" font-size="24" font-weight="800">Launching summer 2026 · Free</text>
   <text x="142" y="354" fill="#211716" font-family="Georgia, serif" font-size="74" font-weight="700">Mood tracking</text>
   <text x="142" y="432" fill="#211716" font-family="Georgia, serif" font-size="74" font-weight="700">without streaks.</text>

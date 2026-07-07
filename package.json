@@ -1,0 +1,15 @@
+{
+  "name": "tendi-site",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "install:browsers": "playwright install chromium",
+    "verify": "python3 tools/verify_static_site.py",
+    "test:browser": "playwright test",
+    "test": "npm run verify && npm run test:browser"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.61.1"
+  }
+}

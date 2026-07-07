@@ -1,0 +1,91 @@
+{
+  "siteName": "Tendi",
+  "domain": "https://tendijournal.app",
+  "previewPort": 8000,
+  "pages": ["index.html", "privacy.html"],
+  "sitemapPaths": ["/", "/privacy.html", "/.well-known/security.txt"],
+  "requiredFiles": [
+    "CNAME",
+    "README.md",
+    "index.html",
+    "privacy.html",
+    "styles.css",
+    "assets/site.js",
+    "assets/app-icon.png",
+    "assets/favicon.png",
+    "_config.yml",
+    "social-card.png",
+    "social-card.svg",
+    "favicon.svg",
+    "robots.txt",
+    "sitemap.xml",
+    "llms.txt",
+    ".well-known/security.txt"
+  ],
+  "pagesConfig": {
+    "requiredIncludes": [".well-known"],
+    "requiredExcludes": [
+      ".cache",
+      ".cursor",
+      ".github",
+      "AGENTS.md",
+      "CLAUDE.md",
+      "README.md",
+      "cloudflare-security.md",
+      "node_modules",
+      "package-lock.json",
+      "package.json",
+      "playwright-report",
+      "playwright.config.js",
+      "site.config.json",
+      "test-results",
+      "tests",
+      "tools"
+    ]
+  },
+  "expectedExternalLinks": [
+    "https://buttondown.com/api/emails/embed-subscribe/tendi",
+    "https://feedback.tendijournal.app",
+    "https://twodesks.app"
+  ],
+  "allowedFormActions": ["https://buttondown.com/api/emails/embed-subscribe/tendi"],
+  "requiredMailtoLinks": ["hello@twodesks.app"],
+  "bannedPublicTerms": [
+    "Bloomery",
+    "Mind Garden",
+    "Classic Garden",
+    "Past Gardens",
+    "Terrarium",
+    "Mossbear",
+    "procedural garden"
+  ],
+  "disallowedScriptMarkers": [
+    "static.cloudflareinsights.com",
+    "cloudflareinsights.com",
+    "beacon.min.js",
+    "googletagmanager.com",
+    "google-analytics.com",
+    "plausible.io",
+    "umami",
+    "fathom",
+    "zaraz"
+  ],
+  "requiredPageText": {
+    "index.html": [
+      "Mood tracking without streaks",
+      "Journal content stays off Tendi servers",
+      "Month Map",
+      "Herbarium",
+      "Tendi is planned for summer 2026"
+    ],
+    "privacy.html": [
+      "You do not need a Tendi account",
+      "iCloud sync",
+      "HealthKit",
+      "TelemetryDeck",
+      "Buttondown",
+      "Find a Helpline",
+      "The Tendi website does not include client-side analytics scripts"
+    ]
+  }
+}

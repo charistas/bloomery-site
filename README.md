@@ -31,6 +31,23 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Verification
+
+Install test dependencies and Playwright's Chromium browser once:
+
+```bash
+npm ci
+npm run install:browsers
+```
+
+Run the full local gate before handoff:
+
+```bash
+npm test
+```
+
+This runs static metadata/link/content checks plus Playwright browser rendering and axe accessibility smoke tests. Screenshots are written to `test-results/screenshots/` for desktop `1280x900` and mobile `390x844` review.
+
 ## Launch QA Notes
 
 - Pages: `index.html`, `privacy.html`

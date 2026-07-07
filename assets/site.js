@@ -14,6 +14,15 @@
         element.replaceWith(link);
     });
 
+    const currentYear = String(new Date().getFullYear());
+    document.querySelectorAll("[data-current-year]").forEach((element) => {
+        element.textContent = currentYear;
+
+        if (element.tagName === "TIME") {
+            element.setAttribute("datetime", currentYear);
+        }
+    });
+
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion || !("IntersectionObserver" in window)) {
         return;

@@ -54,7 +54,7 @@ This runs static metadata/link/content checks plus Playwright browser rendering 
 - Cloudflare security hardening: follow `cloudflare-security.md` before launch or after DNS/security changes.
 - Metadata: canonical URLs, Open Graph, Twitter preview cards, theme color, PNG favicon, and social preview image are defined.
 - Accessibility: semantic sections, skip link, visible keyboard focus, responsive navigation, and minimum touch target sizing are included.
-- Privacy: public policy is aligned with the local-first app posture, optional iCloud sync, HealthKit, optional TelemetryDeck analytics, user-initiated Find a Helpline crisis resource links, support email, Cloudflare hosting/security processing, Buttondown launch-update email processing, and no journal-content server access.
+- Privacy: public policy is aligned with the local-first app posture, optional iCloud sync, HealthKit, optional TelemetryDeck analytics, user-initiated Find a Helpline crisis resource links, support email, Cloudflare hosting/security processing, Buttondown launch-update email processing, the outbound Buy Me a Coffee link, and no journal-content server access.
 - Verification should include desktop and mobile rendering, link checks, and social card inspection.
 
 ## Manual Asset Pipeline

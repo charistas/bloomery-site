@@ -46,6 +46,7 @@
   "expectedExternalLinks": [
     "https://buttondown.com/api/emails/embed-subscribe/tendi",
     "https://feedback.tendijournal.app",
+    "https://buymeacoffee.com/twodesks",
     "https://twodesks.app"
   ],
   "allowedFormActions": ["https://buttondown.com/api/emails/embed-subscribe/tendi"],
@@ -84,6 +85,7 @@
       "HealthKit",
       "TelemetryDeck",
       "Buttondown",
+      "Buy Me a Coffee",
       "Find a Helpline",
       "The Tendi website does not include client-side analytics scripts"
     ]

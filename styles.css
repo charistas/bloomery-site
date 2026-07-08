@@ -700,6 +700,16 @@ h3 {
     font-weight: 700;
 }
 
+.founder-support {
+    margin-top: 20px;
+}
+
+.founder-support a {
+    color: var(--fern-dark);
+    font-weight: 700;
+    text-underline-offset: 3px;
+}
+
 .faq-section {
     background: var(--paper);
 }

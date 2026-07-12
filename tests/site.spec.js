@@ -91,3 +91,21 @@ test("email placeholders and Buttondown forms are wired", async ({ page }) => {
     await expect(page.locator(`form[action="${action}"]`)).toHaveCount(2);
   }
 });
+
+test("support page exposes working contact and policy links", async ({ page }) => {
+  await gotoWithConsoleChecks(page, "support.html");
+
+  await expect(page.locator('a[href="mailto:support@tendijournal.app"]').first()).toBeVisible();
+  await expect(page.locator('a[href="privacy.html"]').first()).toBeVisible();
+  const feedbackSection = page.locator(".content-section").filter({
+    has: page.getByRole("heading", { name: "Send feedback or report a problem" })
+  });
+  await expect(feedbackSection.locator('a[href="https://feedback.tendijournal.app"]')).toBeVisible();
+});
+
+test("homepage navigation links to support", async ({ page }) => {
+  await gotoWithConsoleChecks(page, "index.html");
+
+  const primaryNavigation = page.getByRole("navigation", { name: "Primary" });
+  await expect(primaryNavigation.getByRole("link", { name: "Support" })).toHaveAttribute("href", "support.html");
+});

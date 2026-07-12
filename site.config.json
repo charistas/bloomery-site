@@ -2,13 +2,14 @@
   "siteName": "Tendi",
   "domain": "https://tendijournal.app",
   "previewPort": 8000,
-  "pages": ["index.html", "privacy.html"],
-  "sitemapPaths": ["/", "/privacy.html", "/.well-known/security.txt"],
+  "pages": ["index.html", "privacy.html", "support.html"],
+  "sitemapPaths": ["/", "/privacy.html", "/support.html", "/.well-known/security.txt"],
   "requiredFiles": [
     "CNAME",
     "README.md",
     "index.html",
     "privacy.html",
+    "support.html",
     "styles.css",
     "assets/site.js",
     "assets/app-icon.png",
@@ -46,6 +47,7 @@
   "expectedExternalLinks": [
     "https://buttondown.com/api/emails/embed-subscribe/tendi",
     "https://feedback.tendijournal.app",
+    "https://findahelpline.com",
     "https://buymeacoffee.com/twodesks",
     "https://twodesks.app"
   ],
@@ -88,6 +90,13 @@
       "Buy Me a Coffee",
       "Find a Helpline",
       "The Tendi website does not include client-side analytics scripts"
+    ],
+    "support.html": [
+      "Support",
+      "Frequently asked questions",
+      "Privacy Policy",
+      "Find a Helpline",
+      "support [at] tendijournal [dot] app"
     ]
   }
 }

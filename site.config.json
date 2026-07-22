@@ -47,12 +47,20 @@
   "expectedExternalLinks": [
     "https://buttondown.com/api/emails/embed-subscribe/tendi",
     "https://feedback.tendijournal.app",
+    "https://www.fider.io/legal/privacy",
+    "https://www.fider.io/legal/data-processors",
+    "https://www.fider.io/legal/security-policy",
     "https://findahelpline.com",
     "https://buymeacoffee.com/twodesks",
     "https://twodesks.app"
   ],
   "allowedFormActions": ["https://buttondown.com/api/emails/embed-subscribe/tendi"],
-  "requiredMailtoLinks": ["hello@twodesks.app"],
+  "requiredMailtoLinks": ["hello@twodesks.app", "support@tendijournal.app"],
+  "requiredPageMailtoLinks": {
+    "index.html": ["hello@twodesks.app"],
+    "privacy.html": ["hello@twodesks.app", "support@tendijournal.app"],
+    "support.html": ["support@tendijournal.app"]
+  },
   "bannedPublicTerms": [
     "Bloomery",
     "Mind Garden",
@@ -86,6 +94,10 @@
       "iCloud sync",
       "HealthKit",
       "TelemetryDeck",
+      "Journaling Suggestions",
+      "Fider Cloud",
+      "Delete All Data",
+      "support [at] tendijournal [dot] app",
       "Buttondown",
       "Buy Me a Coffee",
       "Find a Helpline",

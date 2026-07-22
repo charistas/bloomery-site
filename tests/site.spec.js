@@ -82,11 +82,14 @@ for (const pageName of site.pages) {
 }
 
 test("email placeholders and Buttondown forms are wired", async ({ page }) => {
-  await gotoWithConsoleChecks(page, "index.html");
-  for (const email of site.requiredMailtoLinks) {
-    await expect(page.locator(`a[href="mailto:${email}"]`).first()).toBeVisible();
+  for (const [pageName, emails] of Object.entries(site.requiredPageMailtoLinks)) {
+    await gotoWithConsoleChecks(page, pageName);
+    for (const email of emails) {
+      await expect(page.locator(`a[href="mailto:${email}"]`).first()).toBeVisible();
+    }
   }
 
+  await gotoWithConsoleChecks(page, "index.html");
   for (const action of site.allowedFormActions) {
     await expect(page.locator(`form[action="${action}"]`)).toHaveCount(2);
   }

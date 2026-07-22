@@ -9,15 +9,16 @@ Tendi is a self-reflection and journaling tool. It is not intended to diagnose, 
 ## Primary Pages
 
 - [Tendi homepage](https://tendijournal.app/): Product overview, launch list, feature summary, support links, and privacy positioning.
-- [Tendi privacy policy](https://tendijournal.app/privacy.html): Full privacy details covering local storage, optional iCloud sync, HealthKit, optional analytics, user-initiated Find a Helpline crisis resource links, Buttondown launch emails, support email, the outbound Buy Me a Coffee support link, and Cloudflare hosting/security processing.
+- [Tendi privacy policy](https://tendijournal.app/privacy.html): Full privacy details covering local storage, optional iCloud sync, HealthKit, Journaling Suggestions, optional analytics, widget and Watch summaries, Fider public-feedback processing, support/privacy contact routing, user-initiated Find a Helpline crisis resource links, Buttondown launch emails, the outbound Buy Me a Coffee support link, and Cloudflare hosting/security processing.
 - [Tendi support](https://tendijournal.app/support.html): Contact information, practical app and data answers, feedback and bug-reporting paths, privacy information, and crisis-support resources.
 
 ## Related Sites
 
 - [Two Desks](https://twodesks.app/): Studio website for the makers of Tendi.
-- [Tendi feedback](https://feedback.tendijournal.app): Feedback and support intake for Tendi.
+- [Tendi feedback](https://feedback.tendijournal.app): Public, non-sensitive product feedback for Tendi.
 
 ## Contact
 
-- [Email Two Desks](mailto:hello@twodesks.app): General support and product contact.
+- [Email Tendi support](mailto:support@tendijournal.app): Product and app support.
+- [Email Two Desks](mailto:hello@twodesks.app): Privacy, security, legal, and general studio contact.
 - [Security contact](https://tendijournal.app/.well-known/security.txt): Security vulnerability disclosure contact.

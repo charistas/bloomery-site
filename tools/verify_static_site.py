@@ -197,6 +197,18 @@ def check_mailto_placeholders() -> None:
     if missing:
         fail(f"Missing expected mailto/data-email links: {sorted(missing)}")
 
+    for page, page_expected in CONFIG.get("requiredPageMailtoLinks", {}).items():
+        parser = parse_html(page)
+        page_found: set[str] = set()
+        for tag, attrs in parser.tags:
+            if tag in {"span", "a"} and attrs.get("data-email-user") and attrs.get("data-email-domain"):
+                page_found.add(f"{attrs['data-email-user']}@{attrs['data-email-domain']}")
+            if tag == "a" and attrs.get("href", "").startswith("mailto:"):
+                page_found.add(attrs["href"].removeprefix("mailto:"))
+        page_missing = set(page_expected) - page_found
+        if page_missing:
+            fail(f"{page} is missing expected mailto/data-email links: {sorted(page_missing)}")
+
 
 def check_sitemap_and_robots() -> None:
     robots = read("robots.txt")
